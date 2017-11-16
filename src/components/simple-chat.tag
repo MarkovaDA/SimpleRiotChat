@@ -5,7 +5,6 @@
         <chat-footer/>
     </div>
 
-
     <script>
         import './chat/header.tag';
         import './chat/body.tag';
@@ -16,6 +15,7 @@
         this.store = this.mixin();
 
         this.on('mount', () => {
+            //subscribing on server events
             service.on('new-message', (data) => {
                 this.store.dispatch(receiveMessageAction(data));
             });
