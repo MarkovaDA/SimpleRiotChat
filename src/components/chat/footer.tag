@@ -7,7 +7,7 @@
     </div>
 
     <script>
-        import { sendMessageAction } from '../actions/SendMessageAction';
+        import { sendMessageAction } from '../../actions/SendMessageAction';
 
         this.store = this.mixin();
 

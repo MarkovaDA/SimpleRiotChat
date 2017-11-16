@@ -7,9 +7,9 @@
 
 
     <script>
-        import './chat-header.tag';
-        import './chat-body.tag';
-        import './chat-footer.tag';
+        import './chat/header.tag';
+        import './chat/body.tag';
+        import './chat/footer.tag';
         import { service } from './../service/MessageService';
         import { receiveMessageAction } from '../actions/ReceiveMessageAction';
 
