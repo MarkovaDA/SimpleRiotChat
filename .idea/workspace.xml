@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29c0a1bd-0bff-41aa-99ae-8e2cf82ad4e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/EmitterService.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/chat/body.tag" afterPath="$PROJECT_DIR$/src/components/chat/body.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/chat/footer.tag" afterPath="$PROJECT_DIR$/src/components/chat/footer.tag" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/chat/header.tag" afterPath="$PROJECT_DIR$/src/components/chat/header.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/chat/message.tag" afterPath="$PROJECT_DIR$/src/components/chat/message.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/simple-chat.tag" afterPath="$PROJECT_DIR$/src/components/simple-chat.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/store.js" afterPath="$PROJECT_DIR$/src/config/store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.css" afterPath="$PROJECT_DIR$/src/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.tag" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.tag" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/chat/footer.tag">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -125,14 +114,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tag" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.tag" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/chat/header.tag">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="520">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
-                <element signature="e#1023#1253#0#HTML" expanded="false" />
-                <element signature="e#1282#1293#0#HTML" expanded="false" />
+                <element signature="e#1212#1442#0#HTML" expanded="false" />
+                <element signature="e#1471#1482#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -199,11 +188,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/simple-chat.tag" />
         <option value="$PROJECT_DIR$/src/config/store.js" />
-        <option value="$PROJECT_DIR$/src/components/chat/header.tag" />
         <option value="$PROJECT_DIR$/src/components/chat/body.tag" />
         <option value="$PROJECT_DIR$/src/service/EmitterService.js" />
         <option value="$PROJECT_DIR$/src/components/chat/footer.tag" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/components/chat/header.tag" />
       </list>
     </option>
   </component>
@@ -370,12 +359,12 @@
       <workItem from="1510672182607" duration="1244000" />
       <workItem from="1510729355197" duration="22132000" />
       <workItem from="1510821559775" duration="16124000" />
-      <workItem from="1510905157640" duration="17634000" />
+      <workItem from="1510905157640" duration="18474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60818000" />
+    <option name="totallyTimeSpent" value="61658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -675,17 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chat/header.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#1023#1253#0#HTML" expanded="false" />
-            <element signature="e#1282#1293#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/EmitterService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -740,6 +718,17 @@
             <element signature="e#1354#1393#0#HTML" expanded="false" />
             <element signature="e#1448#1489#0#HTML" expanded="false" />
             <element signature="n#style#0;n#chat-footer#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chat/header.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#1212#1442#0#HTML" expanded="false" />
+            <element signature="e#1471#1482#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

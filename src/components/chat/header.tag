@@ -4,10 +4,11 @@
             <h2 class='ui header'>Simple chat</h2>
         </div>
         <div class='chat-control'>
-            <button class='ui circular icon tiny button' onclick = {onSlideUp}>
+            <i class="alarm large icon"></i>
+            <button class='ui circular icon tiny button' if = {isShown} onclick = {onSlideUp}>
                 <i class='window minimize icon'></i>
             </button>
-            <button class='ui circular icon tiny button' onclick = {onSlideDown}>
+            <button class='ui circular icon tiny button' if = {!isShown} onclick = {onSlideDown}>
                 <i class='window maximize icon'></i>
             </button>
             <button class='ui circular icon  tiny button'>
@@ -19,13 +20,16 @@
     <script>
         import { emitterService } from  '../../service/EmitterService';
         //this.emitter = this.mixin('emitter');
+        this.isShown = true;
 
         this.onSlideDown = () => {
             emitterService.emit('SLIDE_DOWN_CHAT');
+            this.isShown = !this.isShown;
         };
 
         this.onSlideUp = () => {
             emitterService.emit('SLIDE_UP_CHAT');
+            this.isShown = !this.isShown;
         }
 
     </script>
