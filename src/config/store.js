@@ -25,4 +25,4 @@ const store = createStore(
 
 store.subscribe(() => {riot.update()});
 
-export const AppStore = store;
+export const appStore = store;

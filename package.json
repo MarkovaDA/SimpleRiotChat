@@ -25,6 +25,7 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "es6-event-emitter": "^1.10.2",
     "redux": "^3.7.2",
     "redux-promise-middleware": "4.2.1",
     "redux-thunk": "^2.2.0",

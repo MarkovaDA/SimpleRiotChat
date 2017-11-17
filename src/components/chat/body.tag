@@ -1,13 +1,16 @@
 <chat-body>
 
-    <div class="ui attached segment" id="wrapper">
+    <div class='ui attached ui segment' id='wrapper'>
         <message each={ item in messages } text={ item } whose={ false } />
     </div>
 
     <script>
         import './message.tag';
+        import { emitterService } from  '../../service/EmitterService';
 
-        this.store = this.mixin();//redux storage
+
+        this.store = this.mixin('store');//redux storage
+        //this.emitter = this.mixin('emitter');
 
         this.messages = [];//chat messages
 
@@ -33,7 +36,23 @@
             this.container.animate({
                 scrollTop: this.container.prop('scrollHeight')
             }, 300);
-        }
+        };
+
+        this.slideUp = () => {
+            this.container.slideUp(300);
+        };
+
+        this.slideDown = () => {
+            this.container.slideDown(300);
+        };
+
+        emitterService.on('SLIDE_UP_CHAT', () => {
+            this.slideUp();
+        });
+
+        emitterService.on('SLIDE_DOWN_CHAT', () => {
+            this.slideDown();
+        });
     </script>
     <style>
         .segment {

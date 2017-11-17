@@ -1,8 +1,8 @@
 <simple-chat>
-    <div  class="chat-container">
-        <chat-header/>
-        <chat-body/>
-        <chat-footer/>
+    <div class='chat-container'>
+        <chat-header />
+        <chat-body  ref='body'/>
+        <chat-footer  ref='footer'/>
     </div>
 
     <script>
@@ -12,7 +12,7 @@
         import { service } from './../service/MessageService';
         import { receiveMessageAction } from '../actions/ReceiveMessageAction';
 
-        this.store = this.mixin();
+        this.store = this.mixin('store');
 
         this.on('mount', () => {
             //subscribing on server events
@@ -24,9 +24,11 @@
 
     <style>
         .chat-container {
-            width: 60%;
-            height: 640px;
-            margin: 5% 20%;
+            position: absolute;
+            width: 40%;
+            height: auto;
+            left: 58%;
+            bottom: 5px;
         }
     </style>
 </simple-chat>
