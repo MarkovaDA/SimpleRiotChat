@@ -15,19 +15,17 @@
     </div>
 
     <script>
-        import { emitterService } from  '../../service/EmitterService';
-        //this.emitter = this.mixin('emitter');
         this.isShown = true;
 
         this.onSlideDown = () => {
-            emitterService.emit('SLIDE_DOWN_CHAT');
+            this.trigger('SLIDE_DOWN');
             this.isShown = !this.isShown;
         };
 
         this.onSlideUp = () => {
-            emitterService.emit('SLIDE_UP_CHAT');
+            this.trigger('SLIDE_UP');
             this.isShown = !this.isShown;
-        }
+        };
     </script>
 
     <style>

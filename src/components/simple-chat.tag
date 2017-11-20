@@ -1,28 +1,47 @@
 <simple-chat>
     <div class='chat-container'>
-        <chat-header />
-        <chat-body  ref='body'/>
-        <chat-footer  ref='footer'/>
+        <chat-header ref = 'header'/>
+        <chat-body   ref = 'body' />
+        <chat-footer ref = 'footer' />
     </div>
 
     <script>
         import './chat/header.tag';
         import './chat/body.tag';
         import './chat/footer.tag';
-        import { messageService } from './../service/MessageService';
-        import { emitterService } from  './../service/EmitterService';
-        import { movingService } from './../service/MovingService';
+
         import { receiveMessageAction } from '../actions/ReceiveMessageAction';
 
         this.store = this.mixin('store');
 
+        this.movingService = this.mixin('movingService');
+        this.expandService = this.mixin('expandService');
+        this.messageService = this.mixin('messageService');
+
         this.on('mount', () => {
-            this.chat = $('.chat-container');
+            //составные компоненты чата
+            this.header = this.refs.header;
+            this.body = this.refs.body;
+            this.footer = this.refs.footer;
 
-            movingService.registNode(this.chat);
+            //прослушиваем события движения мыши по чату для его перемещения
+            this.movingService.registNode($('.chat-container'));
 
-            messageService.on('new-message', (data) => {
+            //прослушиваем события сокета
+            this.messageService.subscribe('NEW_MESSAGE', (data) => {
                 this.store.dispatch(receiveMessageAction(data));
+            });
+
+            //нажата кнопка "развернуть чат" в заголовке чата
+            this.header.on('SLIDE_DOWN', () => {
+                this.expandService.slideDownContent(this.body.getContainer(), 300);
+                this.expandService.slideDownContent(this.footer.getContainer(),100);
+            });
+
+            //нажата кнопка "свернуть чат" в заголовке чата
+            this.header.on('SLIDE_UP', () => {
+                this.expandService.slideUpContent(this.body.getContainer(), 300);
+                this.expandService.slideUpContent(this.footer.getContainer(), 100);
             });
         });
     </script>

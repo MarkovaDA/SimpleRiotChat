@@ -6,15 +6,11 @@
 
     <script>
         import './message.tag';
-        import { emitterService } from  '../../service/EmitterService';
-
 
         this.store = this.mixin('store');//redux storage
-        //this.emitter = this.mixin('emitter');
 
-        this.messages = [];//chat messages
+        this.messages = [];
 
-        //catch new message from server and update view
         this.store.subscribe(() => {
             this.messages = [...this.messages, this.store.getState().lastMessage];
             this.update();
@@ -25,34 +21,29 @@
         });
 
         this.on('updated', () => {
-            //scroll the chat content if only user doesn't scroll to up himself
+            //скроллим чат, если клиент не прокрутил выше ранее
             if (this.container.scrollTop() + this.container.height() >= this.container.prop('scrollHeight')) {
                 this.scrollChat();
             }
         });
 
-        //scroll the chat content to bottom
         this.scrollChat = () => {
             this.container.animate({
                 scrollTop: this.container.prop('scrollHeight')
             }, 300);
         };
 
+        this.getContainer = () => {
+            return this.container;
+        };
+
         this.slideUp = () => {
-            this.container.slideUp(300);
+            this.container.slideUpContent(300);
         };
 
         this.slideDown = () => {
-            this.container.slideDown(300);
+            this.container.slideDownContent(300);
         };
-
-        emitterService.on('SLIDE_UP_CHAT', () => {
-            this.slideUp();
-        });
-
-        emitterService.on('SLIDE_DOWN_CHAT', () => {
-            this.slideDown();
-        });
     </script>
     <style>
         .segment {

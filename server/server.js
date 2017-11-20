@@ -13,18 +13,18 @@ io.on('connection', (socket) => {
     let savedMessage;
     for(let index in messages) {
       savedMessage = messages[index];
-      socket.emit('new-message', savedMessage);
+      socket.emit('NEW_MESSAGE', savedMessage);
     }
   }
 
-  socket.on('send-message', (message) => {
+  socket.on('SEND_MESSAGE', (message) => {
     console.log('RECEIVE', message);
     saveMessageToBuffer(message, socket.id);
 
     let newMessage = {};
 
     //рассылаем сообщение всем подключенным клиентам
-    io.sockets.emit('new-message', message);
+    io.sockets.emit('NEW_MESSAGE', message);
 
     //обрезаем буфер сообщений до  размера size, сохраняя последние сообщения
     if (messages.length >= size) {

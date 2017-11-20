@@ -1,5 +1,5 @@
 <chat-footer>
-    <div class='ui attached segment' id ='footer'>
+    <div class='ui attached segment' id='footer'>
         <div class='ui action input'>
             <input type='text' placeholder='input your message...' ref='msgField' onkeypress = {enterPressOnField}>
             <button class='ui large button' onclick ={sendMessage}>send</button>
@@ -8,10 +8,8 @@
 
     <script>
         import { sendMessageAction } from '../../actions/SendMessageAction';
-        import { emitterService } from  '../../service/EmitterService';
 
         this.store = this.mixin('store');
-        //this.emitter = this.mixin('emitter');
 
         this.on('mount', () => {
             this.container = $('#footer');
@@ -34,21 +32,9 @@
             this.refs.msgField.value = '';
         };
 
-        this.slideUp = () => {
-            this.container.slideUp(100);
+        this.getContainer = () => {
+            return this.container;
         };
-
-        this.slideDown = () => {
-            this.container.slideDown(100);
-        };
-
-        emitterService.on('SLIDE_UP_CHAT', () => {
-            this.slideUp();
-        });
-
-        emitterService.on('SLIDE_DOWN_CHAT', () => {
-            this.slideDown();
-        });
     </script>
 
     <style>

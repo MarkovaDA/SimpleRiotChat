@@ -18,12 +18,12 @@ class MessageService {
     this.socket.close();
   };
 
-  on = (eventTitle, eventHandler) => {
+  subscribe = (eventTitle, eventHandler) => {
     this.socket.on(eventTitle, (data) => {eventHandler(data)});
   };
 
   sendMessage = (msgText) => {
-    this.socket.emit('send-message', msgText);
+    this.socket.emit('SEND_MESSAGE', msgText);
   };
 
 }
