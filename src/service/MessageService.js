@@ -27,4 +27,4 @@ class MessageService {
   };
 
 }
-export const service = new MessageService();
+export const messageService = new MessageService();

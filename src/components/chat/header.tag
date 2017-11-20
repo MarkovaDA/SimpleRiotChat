@@ -1,5 +1,5 @@
 <chat-header>
-    <div class='ui attached segment'>
+    <div class='ui attached segment header'>
         <div class='chat-title'>
             <h2 class='ui header'>Simple chat</h2>
         </div>
@@ -10,9 +10,6 @@
             </button>
             <button class='ui circular icon tiny button' if = {!isShown} onclick = {onSlideDown}>
                 <i class='window maximize icon'></i>
-            </button>
-            <button class='ui circular icon  tiny button'>
-                <i class='maximize icon'></i>
             </button>
         </div>
     </div>
@@ -31,7 +28,6 @@
             emitterService.emit('SLIDE_UP_CHAT');
             this.isShown = !this.isShown;
         }
-
     </script>
 
     <style>
@@ -45,6 +41,5 @@
         .chat-control .icon {
         }
     </style>
-
 
 </chat-header>

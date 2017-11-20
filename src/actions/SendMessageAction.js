@@ -1,7 +1,7 @@
-import {service} from  '../service/MessageService';
+import {messageService} from  '../service/MessageService';
 
 export const sendMessageAction = (message) => {
   return () => {
-    service.sendMessage(message);
+    messageService.sendMessage(message);
   };
 };

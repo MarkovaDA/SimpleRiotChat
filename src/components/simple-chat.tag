@@ -9,14 +9,19 @@
         import './chat/header.tag';
         import './chat/body.tag';
         import './chat/footer.tag';
-        import { service } from './../service/MessageService';
+        import { messageService } from './../service/MessageService';
+        import { emitterService } from  './../service/EmitterService';
+        import { movingService } from './../service/MovingService';
         import { receiveMessageAction } from '../actions/ReceiveMessageAction';
 
         this.store = this.mixin('store');
 
         this.on('mount', () => {
-            //subscribing on server events
-            service.on('new-message', (data) => {
+            this.chat = $('.chat-container');
+
+            movingService.registNode(this.chat);
+
+            messageService.on('new-message', (data) => {
                 this.store.dispatch(receiveMessageAction(data));
             });
         });
